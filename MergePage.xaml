@@ -1,0 +1,52 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="WpfApp1.MergePage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MergePage">
+
+    <Grid >
+        <!--<Label Content="This is merge" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="108,55,0,0"/>-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!--<DockPanel>
+ 
+            <TabControl x:Name="PdfTabControl" />
+        </DockPanel>-->
+        <!--<Wpf:WebView2   x:Name="mergpdf"  Margin="20 40 20 20"  />-->
+        <!--<DockPanel x:Name="doc">
+            <Button Content="Add PDF Tabs" DockPanel.Dock="Top" Click="AddTabs_Click" Height="40"/>
+            <TabControl x:Name="PdfTabControl"/>
+        </DockPanel>-->
+        <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Auto">
+            <Grid  x:Name="TabArea"
+                  DockPanel.Dock="Bottom" Margin="10,29,0,0">
+            </Grid>
+        </ScrollViewer>
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+            </Grid.RowDefinitions>
+        </Grid>-->
+        
+        
+        
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" >
+            <Button x:Name="merload" Click="AddPdfs_Click" Content="Load Pdf" Margin="20 20" VerticalAlignment="Stretch"/>
+            <Button x:Name="Merclo" Click="TabsRem_Click" Content="Close Current Tab" Margin="20 20" VerticalAlignment="Stretch"/>
+            <Button x:Name="MercloAll" Click="ClearTabs_Click" Content="Close All Tabs" Margin="20 20" VerticalAlignment="Stretch"/>
+
+            <!--<Label x:Name="templab" Content="Merge PDF" HorizontalAlignment="Center" Margin="0 10" FontSize="16" />-->
+
+            <Button x:Name="mergetab" Click="Merge_Click" Content="Merge Pdfs" Margin="20 20" VerticalAlignment="Stretch"/>
+        </StackPanel>
+        
+    </Grid>
+</Page>

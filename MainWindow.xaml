@@ -1,0 +1,77 @@
+﻿<Window
+      x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:controls="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance local:MainWindow, IsDesignTimeCreatable=True}"
+        Style="{StaticResource MaterialDesignWindow}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        WindowState="Maximized"
+        Title="Pdf Manager" Height="650" Width="900">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="43*" />
+        </Grid.ColumnDefinitions>
+
+        <!--<StackPanel x:Name="Nav" Grid.Column="0" >
+            <Border
+                VerticalAlignment="Stretch"
+                CornerRadius="20"
+                Margin="10"
+                SnapsToDevicePixels="True" Height="618" Width="122">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#ADD8E6" Offset="0.0"/>
+                        <GradientStop Color="#00008B" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel>
+                    <Button x:Name="merbut" BorderThickness="0" HorizontalAlignment="Stretch" Background="Transparent" Foreground="White" Content="Merging" FontSize="18" Click="Nav_Merge" Margin="0 20" Height="80" Width="104" />
+                    <Button x:Name="splitbut" BorderThickness="0" HorizontalAlignment="Stretch" Background="Transparent" Foreground="White" Content="Splitting" FontSize="18" Click="Nav_Split" Margin="0 20" Height="80"/>
+                    <Button x:Name="waterbut" BorderThickness="0" HorizontalAlignment="Stretch" Background="Transparent" Foreground="White" Content="Watermark" FontSize="18" Click="Nav_Water" Margin="0 20" Height="80"/>
+                    <Button x:Name="rotabut" BorderThickness="0" Background="Transparent" Content="Rotation" FontSize="18" Foreground="White" Click="Nav_Rota" Height="80" RenderTransformOrigin="0.467,1.045"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>-->
+
+        <Border Grid.Column="0"
+        CornerRadius="40"
+   
+        VerticalAlignment="Stretch"
+        SnapsToDevicePixels="True"
+            Background="#201f1e">
+            <!--<Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                    <GradientStop Color="#00008B" Offset="1.0"/>
+                    <GradientStop Color="#ADD8E6" Offset="0.0"/>
+                </LinearGradientBrush>
+            </Border.Background>-->
+
+            <StackPanel x:Name="Nav"
+                VerticalAlignment="Stretch"
+                SnapsToDevicePixels="True"
+                Background="Transparent">
+                <!-- Make stack transparent to show gradient -->
+
+                <!-- Add your buttons here -->
+                <Button x:Name="merbut" BorderThickness="0" HorizontalAlignment="Stretch" Background="Transparent" Foreground="White" Content="Merging" FontSize="18" Click="Nav_Merge" Margin="0 50 0 20" Height="80" />
+                <Button x:Name="splitbut" BorderThickness="0" HorizontalAlignment="Stretch" Background="Transparent" Foreground="White" Content="Splitting" FontSize="18" Click="Nav_Split" Margin="0 20" Height="80"/>
+                <Button x:Name="waterbut" BorderThickness="0" HorizontalAlignment="Stretch" Background="Transparent" Foreground="White" Content="Watermark" FontSize="18" Click="Nav_Water" Margin="0 20" Height="80"/>
+                <Button x:Name="rotabut" BorderThickness="0" Background="Transparent" Content="Rotation" FontSize="18" Foreground="White" Click="Nav_Rota" Height="80" RenderTransformOrigin="0.467,1.045"/>
+            </StackPanel>
+        </Border>
+
+
+
+
+        <Frame x:Name="MainFrame" Background="#282828" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
